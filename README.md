@@ -1,9 +1,9 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6871314&assignment_repo_type=AssignmentRepo)
 Group Members: Paula Arroyave, James Blair, Faiza Hoque, Drake Lam, Nicole Lenge, Matt Machado, and Corinne Scheddin
 
-#Topic: Fleet Vehicle Management
+# Topic: Fleet Vehicle Management
 
-##Problem Statement
+## Problem Statement
 
 For our project, we have been tasked with finding a more cost effective and
 environmentally friendly way for TCNJ’s fleet to operate. In order to become more cost
@@ -17,7 +17,7 @@ replacement costs as low as possible. As new vehicles are introduced, we will us
 straight line method of depreciation. This will keep depreciation costs low and constant
 over the lifespan of the vehicles.
 
-##Objective
+## Objective
 
 Our overall objective is to create a solution that will address how TCNJ can be
 more efficient in reducing emissions and simultaneously create a plan that will be cost
@@ -26,7 +26,7 @@ that holds data regarding TCNJ’s vehicle fleet such as fleet fuel source and e
 and fleet service life and depreciation. The database will include a user interface that
 allows the user to input a year and retrieve information regarding TCNJ’s vehicle fleet
 
-Description of the desired end product/ the part you will develop for this class.
+## Description of the desired end product/ the part you will develop for this class.
 
 We hope that our final database will help us solve the problem of creating a more
 cost effective and eco-friendly fleet for TCNJ. Our database should highlight different
@@ -37,7 +37,7 @@ fuel source and emissions, fleet quantity and age, and fleet operational costs. 
 examining the variables and outputs, we will be able to properly determine which
 vehicles need to be replaced, hopefully in accordance with FIFO.
 
-Description of the importance/ need for the module/how it addresses the problem.
+## Description of the importance/ need for the module/how it addresses the problem.
 
 The module is necessary in addressing the problem because it provides
 information about how fuel source, emissions, age, quantity, and operational costs
