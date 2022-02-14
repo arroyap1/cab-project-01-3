@@ -2,7 +2,10 @@
 Group Members: Paula Arroyave, James Blair, Faiza Hoque, Drake Lam, Nicole Lenge, Matt Machado, and Corinne Scheddin
 1. [Topic: Fleet Vehicle Management](#desc)
 2. [Problem Statement](#usage)
-
+3. [Objective](#usage)
+4. [Problem Statement](#usage)
+5. [Problem Statement](#usage)
+6. [Problem Statement](#usage)
 <a name="desc"></a>
 ## Topic Fleet Vehicle Management
 
