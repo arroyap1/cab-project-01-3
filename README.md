@@ -4,7 +4,7 @@ Group Members: Paula Arroyave, James Blair, Faiza Hoque, Drake Lam, Nicole Lenge
 2. [Problem Statement](#usage)
 
 <a name="desc"></a>
-## 1. Topic Fleet Vehicle Management
+## Topic Fleet Vehicle Management
 
 sometext
 
@@ -23,21 +23,6 @@ replacement costs as low as possible. As new vehicles are introduced, we will us
 straight line method of depreciation. This will keep depreciation costs low and constant
 over the lifespan of the vehicles.
 
-# Topic: Fleet Vehicle Management
-
-## Problem Statement
-
-For our project, we have been tasked with finding a more cost effective and
-environmentally friendly way for TCNJ’s fleet to operate. In order to become more cost
-effective and better for the environment, we suggest slowly transitioning from ICE
-vehicles to zero vehicles. By doing so over time, no large budget will need to be
-immediately created. Instead, money shall be allocated per year for the entire
-transitioning period. This transition period may last 20+ years. Our plan to achieve this
-involves using the FIFO method to retire the model older cars first and replace those
-with the zero vehicles. This will allow newer vehicles to continue in operation, and keep
-replacement costs as low as possible. As new vehicles are introduced, we will use the
-straight line method of depreciation. This will keep depreciation costs low and constant
-over the lifespan of the vehicles.
 
 ## Objective
 
