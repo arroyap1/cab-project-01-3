@@ -25,3 +25,28 @@ effective for the school. Our specific objective for the module is to provide a 
 that holds data regarding TCNJ’s vehicle fleet such as fleet fuel source and emissions
 and fleet service life and depreciation. The database will include a user interface that
 allows the user to input a year and retrieve information regarding TCNJ’s vehicle fleet
+
+Description of the desired end product/ the part you will develop for this class.
+
+We hope that our final database will help us solve the problem of creating a more
+cost effective and eco-friendly fleet for TCNJ. Our database should highlight different
+characteristics per vehicle for the proposal/future years. It should also specify what
+vehicles will be the most cost efficient and environment safe options. The following
+elements will be major variables and output data needed to help solve the problem: fleet
+fuel source and emissions, fleet quantity and age, and fleet operational costs. By
+examining the variables and outputs, we will be able to properly determine which
+vehicles need to be replaced, hopefully in accordance with FIFO.
+
+Description of the importance/ need for the module/how it addresses the problem.
+
+The module is necessary in addressing the problem because it provides
+information about how fuel source, emissions, age, quantity, and operational costs
+influences our solution. The module will also highlight the future plans for the vehicles
+and add a description to the proposed vehicles being put into place. Through our
+database, we will be able to illustrate how our plan for a slow integration of the new fleet
+will be the most beneficial to both TCNJ and the broader community. The database will
+be able to show how using a FIFO method of inventory management will be a
+necessary process in order to replace older vehicles first, as older cars emit more
+emissions than more modernized vehicles. Additionally, it will highlight how straight-line
+depreciation will be most beneficial through a possible depreciation schedule.
+
