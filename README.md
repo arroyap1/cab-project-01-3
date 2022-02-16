@@ -10,7 +10,7 @@ Group Members: Paula Arroyave, James Blair, Faiza Hoque, Drake Lam, Nicole Lenge
 ## 
 
 <a name="usage"></a>
-## 2. Problem Statement
+## Problem Statement
 We have been tasked with finding a more cost effective and
 environmentally friendly way for TCNJ’s fleet to operate. To address the issue of the economical and enviromental composition of TCNJ's vehicle fleet, the vehicles should
 undergo a transition from ICE vehicles to zero vehicles utilizing a First In First Out method. This will allow vehicles to be operated to their full potiential without having an immediate monetary cost, and ensure there are no labor constraints due to the transition. 
