@@ -12,7 +12,7 @@ Group Members: Paula Arroyave, James Blair, Faiza Hoque, Drake Lam, Nicole Lenge
 ## Problem Statement
 We have been tasked with finding a more cost effective and
 environmentally friendly way for TCNJ’s fleet to operate. To address the issue of the economical and enviromental composition of TCNJ's vehicle fleet, the vehicles should
-undergo a transition from ICE vehicles to zero vehicles utilizing a First In First Out method. This will allow vehicles to be operated to their full potiential without having an immediate monetary cost, and ensure there are no labor constraints due to the transition. 
+undergo a transition from ICE vehicles to zero vehicles by retiring the older vehicles first and replacing them with zero emission vehicles. This will allow for a slow, steady replacement of vehicles in order to avoid having the school have high expenses and be able to make the most use out of the current vehicle fleet before replacing them. 
 
 ## Objective
 Address the TCNJ vehicle fleet composition in an effective approach for reducing emmissions and reducing cost. Create a database that holds and operates the data
