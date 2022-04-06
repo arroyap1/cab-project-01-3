@@ -1,0 +1,280 @@
+﻿Vehicle_Id,Year,Department,Model,Vehicle_Type
+1,2017,Move Team,Ford F350 Box truck,C
+2,2006,Bldg. Services,"Ford, Club wagon",C
+3,2003,Bldg. Services,"Ford, Club wagon",C
+4,2002,Bldg. Services,"Dodge, Ram wagon",C
+5,1999,Bldg. Services,"Ford, F250 truck",C
+6,2002,Bldg. Services,"Ford, P/U",C
+7,2007,Move Team,"Chev, 12 pas van",C
+8,2000,Move Team,Ford club wagon,C
+9,2020,Access Control,Carry All 700,C
+10,2007,Access Control,Dodge mini van,C
+11,2006,Access Control,Ford van,C
+12,2002,Access Control,Dodge van,C
+13,2014,Mailing/Receiving,Chev. Exp Van,C
+14,2004,Mailing/Receiving,Ford E350,C
+15,2006,Mailing/Receiving,Ford E350,C
+16,2019,Grounds,Ford F250,C
+17,2019,Grounds,Ford F250,C
+18,2018,Grounds,Ford F350 Mini-Dump,C
+19,2016,Grounds EXT,Ford F350 Rack body,C
+20,2015,Grounds,Ford F450 Dump,C
+21,2014,Grounds,Ford F250,C
+22,2014,Grounds EXT,Ford F150,C
+23,2012,Grounds,Ford F350 6.2L,C
+24,2011,Grounds,Chevy Colorado,C
+25,2008,Grounds,Ford Ranger,C
+26,2006,Grounds,"Ford, P/U",C
+27,2005,Grounds EXT,"Dodge 2500, Ram P/U",C
+28,2004,Grounds,"Ford, P/U",C
+29,2012,Grounds Sup,Ford Escape,C
+30,2007,"Grounds, auto",Ford Crown Vic,C
+31,2010,Carpenter,Chevy 1500 PU,C
+32,2009,Carpenter,Ford van,C
+33,2019,Carpenter,CarryAll 700,C
+34,2006,Carpenter Sup,Ford Crown Vic,C
+35,2020,Carpenter/Roof,Ford F250 W/ Utility,C
+36,2016,Const. Shop,Ford Transit Cargo,C
+37,2017,Const. Shop,F-250,C
+38,2006,Const. Shop,Ford E150 van,C
+39,2014,Const. Shop,Chevy van,C
+40,2008,Paint,Ford van,C
+41,2006,Mason,Ford van,C
+42,2009,Const. Shop,Ford E150,C
+43,2008,Electric Shop,"Ford, aerial",C
+44,2006,Electric Shop,Ford van,C
+45,2005,Electric Shop,"Dodge, Caravan",C
+46,2010,Electric Shop,Dodge Caravan,C
+47,2003,Electric Shop,"Dodge, caravan",C
+48,2016,HVAC Shop,Ford Transit Cargo,C
+49,2010,HVAC Shop,Chevy 1500 van,C
+50,2009,HVAC Shop,Ford E150,C
+51,2009,HVAC Shop,Ford E150,C
+52,2008,HVAC Shop,"Ford, E150 van",C
+53,2006,HVAC Shop,"Ford, Club wagon",C
+54,2006,HVAC Shop,"Ford, E150 van",C
+55,2011,HVAC Shop PH,Ford Escape,C
+56,2020,Plumbing Shop,Ford F250 Utility,C
+57,2016,Plumbing Shop,Ford Transit Cargo,C
+58,2008,Plumbing Shop,Ford E150,C
+59,2006,Plumbing Shop,Ford E150,C
+60,2000,Plumbing Shop,Ford E150,C
+61,2009,Plumbing Shop,Ford E150,C
+62,2006,Plumbing Shop,Ford E150,C
+63,2017,Repair,Ford Transit Connect XL,C
+64,2014,Repair,Chevy Exp. van,C
+65,2019,Repair,CarryAll 700,C
+66,2006,HVAC Shop,"Ford, E150 van",C
+67,2019,Information Tech.,Chevy Express Cargo,C
+68,2018,Information Tech.,Ford Transit High Top,C
+69,2004,Telecommunications,Ford Ranger,C
+70,2002,Telecommunications,Dodge Caravan,C
+71,1994,Biology,Mazda B3000,C
+72,2010,School of Ed,Dodge Grand Caravan,C
+73,2019,Bonner Center,Chev Express pass van,C
+74,2017,Bonner Center,Chev 12 pass van,C
+75,2017,Bonner Center,Chev 12 pass van,C
+76,2006,Bonner Center,Ford Econ.van,C
+77,2006,Bonner Center,"Ford,Econ.Van",C
+78,2003,Bonner Center,Ford club wagon,C
+79,2018,Campus PD,Ford Explorer,C
+80,2018,Campus PD,Ford Explorer,C
+81,2017,Campus PD,Ford Explorer,C
+82,2016,Campus PD,Ford Taurus,C
+83,2015,Campus PD,Ford Taurus,C
+84,2014,Campus PD,Ford Taurus,C
+85,2014,Campus PD,Ford Taurus,C
+86,2018,Admissions,Grand Caravan,C
+87,2018,Fleet Loaner,Grand Caravan,C
+88,2014,Fleet Loaner,Dodge Caravan,C
+89,2014,Admissions,Dodge Caravan,C
+90,2018,Athletics,Chevy Express van,C
+91,2010,Athletics,Chevy 2500 van,C
+92,2010,Athletics,Chevy 2500 van,C
+93,2010,Athletics,Chevy 2500 van,C
+94,2010,Athletics,Chevy 2500 van,C
+95,2007,Athletics,Chev.12 pas van,C
+96,2007,Athletics,Chev.12 pas van,C
+97,2017,Athletics,Ford F-250,C
+98,2032,Move Team,NULL,P
+99,2022,Bldg. Services,NULL,P
+100,2022,Bldg. Services,NULL,P
+101,2022,Bldg. Services,NULL,P
+102,2022,Bldg. Services,NULL,P
+103,2022,Move Team,NULL,P
+104,2022,Move Team,NULL,P
+105,2030,Access Control,NULL,P
+106,2022,Access Control,NULL,P
+107,2022,Access Control,NULL,P
+108,2022,Access Control,NULL,P
+109,2029,Mailing/Receiving,NULL,P
+110,2022,Mailing/Receiving,NULL,P
+111,2034,Grounds,NULL,P
+112,2034,Grounds,NULL,P
+113,2033,Grounds,NULL,P
+114,2031,Grounds EXT,NULL,P
+115,2030,Grounds,NULL,P
+116,2029,Grounds,NULL,P
+117,2039,Grounds EXT,NULL,P
+118,2027,Grounds,NULL,P
+119,2026,Grounds,NULL,P
+120,2023,Grounds,NULL,P
+121,2022,Grounds,NULL,P
+122,2022,Grounds EXT,NULL,P
+123,2021,Grounds Sup,NULL,P
+124,2022,"Grounds, auto",NULL,P
+125,2025,Carpenter,NULL,P
+126,2024,Carpenter,NULL,P
+127,2029,Carpenter,NULL,P
+128,2022,Carpenter Sup,NULL,P
+129,2035,Carpenter/Roof,NULL,P
+130,2031,Const. Shop,NULL,P
+131,2032,Const. Shop,NULL,P
+132,2022,Const. Shop,NULL,P
+133,2029,Const. Shop,NULL,P
+134,2023,Paint,NULL,P
+135,2022,Mason,NULL,P
+136,2024,Const. Shop,NULL,P
+137,2023,Electric Shop,NULL,P
+138,2022,Electric Shop,NULL,P
+139,2022,Electric Shop,NULL,P
+140,2025,Electric Shop,NULL,P
+141,2022,Electric Shop,NULL,P
+142,2031,HVAC Shop,NULL,P
+143,2025,HVAC Shop,NULL,P
+144,2024,HVAC Shop,NULL,P
+145,2024,HVAC Shop,NULL,P
+146,2022,HVAC Shop,NULL,P
+147,2022,HVAC Shop,NULL,P
+148,2026,HVAC Shop PH,NULL,P
+149,2035,Plumbing Shop,NULL,P
+150,2031,Plumbing Shop,NULL,P
+151,2023,Plumbing Shop,NULL,P
+152,2022,Plumbing Shop,NULL,P
+153,2022,Plumbing Shop,NULL,P
+154,2024,Plumbing Shop,NULL,P
+155,2021,Plumbing Shop,NULL,P
+156,2032,Repair,NULL,P
+157,2029,Repair,NULL,P
+158,2029,Repair,NULL,P
+159,2022,HVAC Shop,NULL,P
+160,2034,Information Tech.,NULL,P
+161,2033,Information Tech.,NULL,P
+162,2022,Telecommunications,NULL,P
+163,2022,Telecommunications,NULL,P
+164,2029,Bonner Center,NULL,P
+165,2027,Bonner Center,NULL,P
+166,2027,Bonner Center,NULL,P
+167,2022,Bonner Center,NULL,P
+168,2022,Bonner Center,NULL,P
+169,2022,Bonner Center,NULL,P
+170,2023,Campus PD,NULL,P
+171,2023,Campus PD,NULL,P
+172,2022,Campus PD,NULL,P
+173,2022,Campus PD,NULL,P
+174,2022,Campus PD,NULL,P
+175,2022,Campus PD,NULL,P
+176,2022,Campus PD,NULL,P
+177,2021,Admissions,NULL,P
+178,2021,Fleet Loaner,NULL,P
+179,2021,Fleet Loaner,NULL,P
+180,2021,Admissions,NULL,P
+181,2028,Athletics,NULL,P
+182,2022,Athletics,NULL,P
+183,2022,Athletics,NULL,P
+184,2022,Athletics,NULL,P
+185,2022,Athletics,NULL,P
+186,2022,Athletics,NULL,P
+187,2022,Athletics,NULL,P
+188,2032,Athletics,NULL,P
+189,2044,Move Team,NULL,F
+190,2034,Bldg. Services,NULL,F
+191,2034,Bldg. Services,NULL,F
+192,2034,Bldg. Services,NULL,F
+193,2034,Bldg. Services,NULL,F
+194,2034,Move Team,NULL,F
+195,2034,Move Team,NULL,F
+196,2042,Access Control,NULL,F
+197,2034,Access Control,NULL,F
+198,2034,Access Control,NULL,F
+199,2034,Access Control,NULL,F
+200,2041,Mailing/Receiving,NULL,F
+201,2034,Mailing/Receiving,NULL,F
+202,2046,Grounds,NULL,F
+203,2046,Grounds,NULL,F
+204,2045,Grounds,NULL,F
+205,2043,Grounds EXT,NULL,F
+206,2042,Grounds,NULL,F
+207,2041,Grounds,NULL,F
+208,2041,Grounds EXT,NULL,F
+209,2039,Grounds,NULL,F
+210,2038,Grounds,NULL,F
+211,2035,Grounds,NULL,F
+212,2034,Grounds,NULL,F
+213,2034,Grounds EXT,NULL,F
+214,2033,Grounds Sup,NULL,F
+215,2034,"Grounds, auto",NULL,F
+216,2037,Carpenter,NULL,F
+217,2036,Carpenter,NULL,F
+218,2041,Carpenter,NULL,F
+219,2034,Carpenter Sup,NULL,F
+220,2047,Carpenter/Roof,NULL,F
+221,2043,Const. Shop,NULL,F
+222,2044,Const. Shop,NULL,F
+223,2034,Const. Shop,NULL,F
+224,2041,Const. Shop,NULL,F
+225,2035,Paint,NULL,F
+226,2034,Mason,NULL,F
+227,2036,Const. Shop,NULL,F
+228,2035,Electric Shop,NULL,F
+229,2034,Electric Shop,NULL,F
+230,2034,Electric Shop,NULL,F
+231,2037,Electric Shop,NULL,F
+232,2034,Electric Shop,NULL,F
+233,2043,HVAC Shop,NULL,F
+234,2037,HVAC Shop,NULL,F
+235,2036,HVAC Shop,NULL,F
+236,2036,HVAC Shop,NULL,F
+237,2034,HVAC Shop,NULL,F
+238,2034,HVAC Shop,NULL,F
+239,2038,HVAC Shop PH,NULL,F
+240,2047,Plumbing Shop,NULL,F
+241,2043,Plumbing Shop,NULL,F
+242,2035,Plumbing Shop,NULL,F
+243,2034,Plumbing Shop,NULL,F
+244,2034,Plumbing Shop,NULL,F
+245,2036,Plumbing Shop,NULL,F
+246,2033,Plumbing Shop,NULL,F
+247,2044,Repair,NULL,F
+248,2041,Repair,NULL,F
+249,2041,Repair,NULL,F
+250,2034,HVAC Shop,NULL,F
+251,2046,Information Tech.,NULL,F
+252,2045,Information Tech.,NULL,F
+253,2034,Telecommunications,NULL,F
+254,2034,Telecommunications,NULL,F
+255,2041,Bonner Center,NULL,F
+256,2039,Bonner Center,NULL,F
+257,2039,Bonner Center,NULL,F
+258,2034,Bonner Center,NULL,F
+259,2034,Bonner Center,NULL,F
+260,2034,Bonner Center,NULL,F
+261,2035,Campus PD,NULL,F
+262,2035,Campus PD,NULL,F
+263,2034,Campus PD,NULL,F
+264,2034,Campus PD,NULL,F
+265,2034,Campus PD,NULL,F
+266,2034,Campus PD,NULL,F
+267,2034,Campus PD,NULL,F
+268,2033,Admissions,NULL,F
+269,2033,Fleet Loaner,NULL,F
+270,2033,Fleet Loaner,NULL,F
+271,2033,Admissions,NULL,F
+272,2040,Athletics,NULL,F
+273,2034,Athletics,NULL,F
+274,2034,Athletics,NULL,F
+275,2034,Athletics,NULL,F
+276,2034,Athletics,NULL,F
+277,2034,Athletics,NULL,F
+278,2034,Athletics,NULL,F
+279,2044,Athletics,NULL,F
