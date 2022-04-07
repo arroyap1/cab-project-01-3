@@ -39,7 +39,7 @@ GROUP BY V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost;
 ORDER BY V.Vehicle_Type ASC;
 
 CREATE VIEW Type_Cost as
-SELECT V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(Total_Cost) as Total_Cost
+SELECT Vehicle_Type, Initial_Cost, Maintenance_Cost, Fuel_Cost, SUM(Total_Cost) as Total_Cost
 FROM Temp3
 GROUP BY Vehicle_Type, Initial_Cost, Maintenance_Cost, Fuel_Cost;
 ORDER BY Vehicle_Type ASC;
@@ -90,7 +90,7 @@ GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type
 ORDER BY V.Vehicle_Type ASC;
 
 CREATE VIEW Type_Emis as 
-SELECT V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type, SUM(Total_AEP) as Total_AEP, SUM(Total_AEGHG) as Total_AEGHG
+SELECT Vehicle_Type, AEP, AEGHG, Engine_Type, SUM(Total_AEP) as Total_AEP, SUM(Total_AEGHG) as Total_AEGHG
 FROM Temp4
 GROUP BY Vehicle_Type, AEP, AEGHG, Engine_Type
 ORDER BY Vehicle_Type ASC;
