@@ -32,11 +32,17 @@ FROM Temp1
 GROUP BY Department, InitialCost, MaintenanceCost, FuelCost;
 ORDER BY V.Department ASC;
 
-CREATE VIEW Type_Cost as
+CREATE VIEW Temp3 as
 SELECT V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(C.Initial_Cost+ C.Maintenance_Cost+ C.Fuel_Cost) as Total_Cost
 FROM Vehicle_Cost as C NATURAL JOIN Vehicle as V
 GROUP BY V.Vehicle_Type, C.InitialCost, C.MaintenanceCost, C.FuelCost;
 ORDER BY V.Vehicle_Type ASC;
+
+CREATE VIEW Type_Cost as
+SELECT V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(Total_Cost) as Total_Cost
+FROM Temp3
+GROUP BY Vehicle_Type, InitialCost, MaintenanceCost, FuelCost;
+ORDER BY Vehicle_Type ASC;
 
 CREATE VIEW Curr_Cost as
 SELECT V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(C.Initial_Cost+ C.Maintenance_Cost+ C.Fuel_Cost) as Total_Cost
@@ -76,4 +82,64 @@ SELECT Department, AEP, AEGHG, Engine_Type, SUM(Total_AEP) as Total_AEP, SUM(Tot
 FROM Temp2
 GROUP BY Department, AEP, AEGHG, Engine_Type
 ORDER BY Department ASC;
+
+CREATE VIEW Temp4 as 
+SELECT V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
+FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
+GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type
+ORDER BY V.Vehicle_Type ASC;
+
+CREATE VIEW Type_Emis as 
+SELECT V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type, SUM(Total_AEP) as Total_AEP, SUM(Total_AEGHG) as Total_AEGHG
+FROM Temp4
+GROUP BY Vehicle_Type, AEP, AEGHG, Engine_Type
+ORDER BY Vehicle_Type ASC;
+
+CREATE VIEW Curr_Emis as 
+SELECT V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
+FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
+WHERE V.Vehicle_Type = 'C'
+GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type
+ORDER BY V.Vehicle_Type ASC;
+
+CREATE VIEW Prop_Emis as 
+SELECT V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
+FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
+WHERE V.Vehicle_Type = 'P'
+GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type
+ORDER BY V.Vehicle_Type ASC;
+
+CREATE VIEW Fut_Emis as 
+SELECT V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
+FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
+WHERE V.Vehicle_Type = 'F'
+GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type
+ORDER BY V.Vehicle_Type ASC;
+
+CREATE VIEW Veh_Info as
+SELECT Vehicle_Id, Year, Department, Model, Vehicle_Type
+FROM Vehicle
+GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type
+ORDER BY Vehicle_Id ASC;
+
+CREATE VIEW Curr_Veh as
+SELECT  Vehicle_Id, Department, Year, Model, Vehicle_Type
+FROM Vehicle
+WHERE Vehicle_Type = 'C'
+GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type
+ORDER BY Vehicle_Id ASC;
+
+CREATE VIEW Prop_Veh as
+SELECT  Vehicle_Id, Department, Year, Model, Vehicle_Type
+FROM Vehicle
+WHERE Vehicle_Type = 'P'
+GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type
+ORDER BY Vehicle_Id ASC;
+
+CREATE VIEW Fut_Veh as
+SELECT  Vehicle_Id, Department, Year, Model, Vehicle_Type
+FROM Vehicle
+WHERE Vehicle_Type = 'F'
+GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type
+ORDER BY Vehicle_Id ASC;
 
