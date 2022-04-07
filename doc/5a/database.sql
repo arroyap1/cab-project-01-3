@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS Pickup CASCADE;
 DROP TABLE  IF EXISTS Other CASCADE;
 DROP TABLE  IF EXISTS Engine CASCADE;
 DROP TABLE  IF EXISTS Runs_On CASCADE;
+
 CREATE TABLE Vehicle (Vehicle_Id int PRIMARY KEY, Year int, Department text, Model text, Vehicle_Type char(1) NOT NULL);
 CREATE TABLE Vehicle_Cost (Vehicle_Id int REFERENCES Vehicle, Maintenance_Cost double precision, Initial_Cost double precision, Fuel_Cost double precision, PRIMARY KEY (Vehicle_Id));
 CREATE TABLE Van (Vehicle_Id int REFERENCES Vehicle, Van_Type text, PRIMARY KEY (Vehicle_Id));
@@ -19,10 +20,16 @@ FROM Vehicle_Cost
 GROUP BY Vehicle_Id, Initial_Cost, Maintenance_Cost, Fuel_Cost
 ORDER BY Vehicle_Id ASC;
 
-CREATE VIEW Dep_Cost as
+CREATE VIEW Temp1 as
 SELECT V.Department, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(C.Initial_Cost+ C.Maintenance_Cost+ C.Fuel_Cost) as Total_Cost
 FROM Vehicle_Cost as C NATURAL JOIN Vehicle as V
 GROUP BY V.Department, C.InitialCost, C.MaintenanceCost, C.FuelCost;
+ORDER BY V.Department ASC;
+
+CREATE VIEW Dep_Cost as
+SELECT Department, Initial_Cost, Maintenance_Cost, Fuel_Cost, SUM(Total_Cost) as Total_Cost
+FROM Temp1
+GROUP BY Department, InitialCost, MaintenanceCost, FuelCost;
 ORDER BY V.Department ASC;
 
 CREATE VIEW Type_Cost as
@@ -52,4 +59,21 @@ WHERE V.Vehicle_Type = 'F'
 GROUP BY V.Vehicle_Type, C.InitialCost, C.MaintenanceCost, C.FuelCost;
 ORDER BY Total_Cost ASC;
 
+CREATE VIEW Id_Emis as 
+SELECT V.Vehicle_Id, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
+FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
+GROUP BY V.Vehicle_Id, E.AEP, E.AEGHG, E.Engine_Type
+ORDER BY V.Vehicle_Id ASC;
+
+CREATE VIEW Temp2 as 
+SELECT V.Department, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
+FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
+GROUP BY V.Department, E.AEP, E.AEGHG, E.Engine_Type
+ORDER BY V.Department ASC;
+
+CREATE VIEW Dep_Emis as 
+SELECT Department, AEP, AEGHG, Engine_Type, SUM(Total_AEP) as Total_AEP, SUM(Total_AEGHG) as Total_AEGHG
+FROM Temp2
+GROUP BY Department, AEP, AEGHG, Engine_Type
+ORDER BY Department ASC;
 
