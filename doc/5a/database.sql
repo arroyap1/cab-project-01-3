@@ -23,46 +23,46 @@ ORDER BY Vehicle_Id ASC;
 CREATE VIEW Temp1 as
 SELECT V.Department, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(C.Initial_Cost+ C.Maintenance_Cost+ C.Fuel_Cost) as Total_Cost
 FROM Vehicle_Cost as C NATURAL JOIN Vehicle as V
-GROUP BY V.Department, C.InitialCost, C.MaintenanceCost, C.FuelCost;
+GROUP BY V.Department, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost;
 ORDER BY V.Department ASC;
 
 CREATE VIEW Dep_Cost as
 SELECT Department, Initial_Cost, Maintenance_Cost, Fuel_Cost, SUM(Total_Cost) as Total_Cost
 FROM Temp1
-GROUP BY Department, InitialCost, MaintenanceCost, FuelCost;
+GROUP BY Department, Initial_Cost, Maintenance_Cost, Fuel_Cost;
 ORDER BY V.Department ASC;
 
 CREATE VIEW Temp3 as
 SELECT V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(C.Initial_Cost+ C.Maintenance_Cost+ C.Fuel_Cost) as Total_Cost
 FROM Vehicle_Cost as C NATURAL JOIN Vehicle as V
-GROUP BY V.Vehicle_Type, C.InitialCost, C.MaintenanceCost, C.FuelCost;
+GROUP BY V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost;
 ORDER BY V.Vehicle_Type ASC;
 
 CREATE VIEW Type_Cost as
 SELECT V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(Total_Cost) as Total_Cost
 FROM Temp3
-GROUP BY Vehicle_Type, InitialCost, MaintenanceCost, FuelCost;
+GROUP BY Vehicle_Type, Initial_Cost, Maintenance_Cost, Fuel_Cost;
 ORDER BY Vehicle_Type ASC;
 
 CREATE VIEW Curr_Cost as
 SELECT V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(C.Initial_Cost+ C.Maintenance_Cost+ C.Fuel_Cost) as Total_Cost
 FROM Vehicle_Cost as C NATURAL JOIN Vehicle as V
 WHERE V.Vehicle_Type = 'C'
-GROUP BY V.Vehicle_Type, C.InitialCost, C.MaintenanceCost, C.FuelCost;
+GROUP BY V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost;
 ORDER BY Total_Cost ASC;
 
 CREATE VIEW Prop_Cost as
 SELECT V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(C.Initial_Cost+ C.Maintenance_Cost+ C.Fuel_Cost) as Total_Cost
 FROM Vehicle_Cost as C NATURAL JOIN Vehicle as V
 WHERE V.Vehicle_Type = 'P'
-GROUP BY V.Vehicle_Type, C.InitialCost, C.MaintenanceCost, C.FuelCost;
+GROUP BY V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost;
 ORDER BY Total_Cost ASC;
 
 CREATE VIEW Fut_Cost as
 SELECT V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(C.Initial_Cost+ C.Maintenance_Cost+ C.Fuel_Cost) as Total_Cost
 FROM Vehicle_Cost as C NATURAL JOIN Vehicle as V
 WHERE V.Vehicle_Type = 'F'
-GROUP BY V.Vehicle_Type, C.InitialCost, C.MaintenanceCost, C.FuelCost;
+GROUP BY V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost;
 ORDER BY Total_Cost ASC;
 
 CREATE VIEW Id_Emis as 
