@@ -17,16 +17,16 @@ CREATE TABLE Runs_On (Vehicle_Id int REFERENCES Vehicle, Engine_Id int REFERENCE
 CREATE VIEW Id_Cost as
 SELECT Vehicle_Id, Initial_Cost, Maintenance_Cost, Fuel_Cost, SUM(Initial_Cost+ Maintenance_Cost+ Fuel_Cost) as Total_Cost
 FROM Vehicle_Cost
-GROUP BY Vehicle_Id, Initial_Cost, Maintenance_Cost, Fuel_Cost
+GROUP BY Vehicle_Id, Initial_Cost, Maintenance_Cost, Fuel_Cost;
 
-CREATE VIEW Temp1 as
+CREATE VIEW Temp as
 SELECT V.Department, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost, SUM(C.Initial_Cost+ C.Maintenance_Cost+ C.Fuel_Cost) as Total_Cost
 FROM Vehicle_Cost as C NATURAL JOIN Vehicle as V
 GROUP BY V.Department, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost;
 
 CREATE VIEW Dep_Cost as
 SELECT Department, Initial_Cost, Maintenance_Cost, Fuel_Cost, SUM(Total_Cost) as Total_Cost
-FROM Temp1
+FROM Temp
 GROUP BY Department, Initial_Cost, Maintenance_Cost, Fuel_Cost;
 
 CREATE VIEW Temp3 as
@@ -60,66 +60,65 @@ GROUP BY V.Vehicle_Type, C.Initial_Cost, C.Maintenance_Cost, C.Fuel_Cost;
 CREATE VIEW Id_Emis as 
 SELECT V.Vehicle_Id, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
 FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
-GROUP BY V.Vehicle_Id, E.AEP, E.AEGHG, E.Engine_Type
+GROUP BY V.Vehicle_Id, E.AEP, E.AEGHG, E.Engine_Type;
 
-CREATE VIEW Temp2 as 
+CREATE VIEW Temp0 as 
 SELECT V.Department, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
 FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
-GROUP BY V.Department, E.AEP, E.AEGHG, E.Engine_Type
+GROUP BY V.Department, E.AEP, E.AEGHG, E.Engine_Type;
 
 CREATE VIEW Dep_Emis as 
 SELECT Department, AEP, AEGHG, Engine_Type, SUM(Total_AEP) as Total_AEP, SUM(Total_AEGHG) as Total_AEGHG
-FROM Temp2
-GROUP BY Department, AEP, AEGHG, Engine_Type
+FROM Temp0
+GROUP BY Department, AEP, AEGHG, Engine_Type;
 
 CREATE VIEW Temp4 as 
 SELECT V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
 FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
-GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type
+GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type;
 
 CREATE VIEW Type_Emis as 
 SELECT Vehicle_Type, AEP, AEGHG, Engine_Type, SUM(Total_AEP) as Total_AEP, SUM(Total_AEGHG) as Total_AEGHG
 FROM Temp4
-GROUP BY Vehicle_Type, AEP, AEGHG, Engine_Type
+GROUP BY Vehicle_Type, AEP, AEGHG, Engine_Type;
 
 CREATE VIEW Curr_Emis as 
 SELECT V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
 FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
 WHERE V.Vehicle_Type = 'C'
-GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type
+GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type;
 
 CREATE VIEW Prop_Emis as 
 SELECT V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
 FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
 WHERE V.Vehicle_Type = 'P'
-GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type
+GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type;
 
 CREATE VIEW Fut_Emis as 
 SELECT V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type, SUM(AEP) as Total_AEP, SUM(AEGHG) as Total_AEGHG
 FROM Vehicle as V NATURAL JOIN Runs_On NATURAL JOIN Engine as E
 WHERE V.Vehicle_Type = 'F'
-GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type
+GROUP BY V.Vehicle_Type, E.AEP, E.AEGHG, E.Engine_Type;
 
 CREATE VIEW Veh_Info as
 SELECT Vehicle_Id, Year, Department, Model, Vehicle_Type
 FROM Vehicle
-GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type
+GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type;
 
 CREATE VIEW Curr_Veh as
 SELECT  Vehicle_Id, Department, Year, Model, Vehicle_Type
 FROM Vehicle
 WHERE Vehicle_Type = 'C'
-GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type
+GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type;
 
 CREATE VIEW Prop_Veh as
 SELECT  Vehicle_Id, Department, Year, Model, Vehicle_Type
 FROM Vehicle
 WHERE Vehicle_Type = 'P'
-GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type
+GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type;
 
 CREATE VIEW Fut_Veh as
 SELECT  Vehicle_Id, Department, Year, Model, Vehicle_Type
 FROM Vehicle
 WHERE Vehicle_Type = 'F'
-GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type
-
+GROUP BY Vehicle_Id, Year, Department, Model, Vehicle_Type;
