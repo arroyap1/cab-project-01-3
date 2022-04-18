@@ -2,9 +2,9 @@ DROP TABLE IF EXISTS Vehicle CASCADE;
 DROP TABLE IF EXISTS Vehicle_Cost CASCADE;
 DROP TABLE IF EXISTS Van CASCADE;
 DROP TABLE IF EXISTS Pickup CASCADE;
-DROP TABLE  IF EXISTS Other CASCADE;
-DROP TABLE  IF EXISTS Engine CASCADE;
-DROP TABLE  IF EXISTS Runs_On CASCADE;
+DROP TABLE IF EXISTS Other CASCADE;
+DROP TABLE IF EXISTS Engine CASCADE;
+DROP TABLE IF EXISTS Runs_On CASCADE;
 
 CREATE TABLE Vehicle (Vehicle_Id int PRIMARY KEY, Year int, Department text, Model text, Vehicle_Type char(1) NOT NULL);
 CREATE TABLE Vehicle_Cost (Vehicle_Id int REFERENCES Vehicle, Maintenance_Cost double precision, Initial_Cost double precision, Fuel_Cost double precision, PRIMARY KEY (Vehicle_Id));
