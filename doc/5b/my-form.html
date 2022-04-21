@@ -1,0 +1,105 @@
+<!-- /templates/my-form.html-->
+
+<html>
+    <head>
+        <title>Fleet Vehicle Database</title>
+    </head>
+    <body>
+	    <h3>Fleet Vehicle Database</h3>
+
+        vehicles in department
+        <select name=department method ="GET" action="/">
+            {% for dep in depList %}
+                <option value= "{{dep}}" SELECTED>{{dep}}</option>
+            {% endfor %}
+        </select>
+
+        <h4>Vehicle Info Comparison</h4>
+        <form action="/info-handler" method="POST">
+            <div>
+
+                View <select name="vehicle category">
+                    <option value="Curr_Veh">Current</option>
+                    <option value="Prop_Veh">Proposed</option>
+                    <option value="Fut_Veh">Future</option>
+                    <option value="Veh_Info">All</option>
+                </select>
+
+                vehicles
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h4>Vehicle Type Comparison</h4>
+        <form action="/type-handler" method="POST">
+            <div>
+
+                View all current vehicles categorized as <select name="vehicle type">
+                    <option value="Curr_Van">Vans</option>
+                    <option value="Curr_Pickup">Pickups</option>
+                    <option value="Curr_Other">Others</option>
+                </select>
+
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h4>AEGHG Comparison</h4>
+        <form action="/aeghg-handler" method="POST">
+            <div>
+
+                View <select name="vehicle category">
+                    <option value="Curr_Emis">Current</option>
+                    <option value="Prop_Emis">Proposed</option>
+                    <option value="Fut_Emis">Future</option>
+                    <option value="Type_Emis">All</option>
+                </select>
+
+                vehicles with AEGHG 
+                <input type="radio" name="options"  value="<"><</input>
+                <input type="radio" name="options"  value=">">></input>
+                <input type="radio" name="options"  value="=">=</input>
+                <input type="radio" name="options"  value="<="><=</input>
+                <input type="radio" name="options"  value=">=">>=</input>
+
+                <input type="text" name="aeghg">
+            </div>
+                <input type="submit" value="Submit">
+        </form>
+
+        <h4>Total Cost Comparison</h4>
+        <form action="/cost-handler" method="POST">
+            <div>
+
+                View <select name="vehicle category">
+                    <option value="Curr_Cost">Current</option>
+                    <option value="Prop_Cost">Proposed</option>
+                    <option value="Fut_Cost">Future</option>
+                    <option value="Type_Cost">All</option>
+                </select>
+
+                vehicles' total cost 
+                <input type="radio" name="options"  value="<"><</input>
+                <input type="radio" name="options"  value=">">></input>
+                <input type="radio" name="options"  value="=">=</input>
+                <input type="radio" name="options"  value="<="><=</input>
+                <input type="radio" name="options"  value=">=">>=</input>
+
+                <input type="text" name="cost">
+            </div>
+                <input type="submit" value="Submit">
+        </form>
+
+    </body>
+
+    <!-- minimal styling -->
+    <style>
+        form {
+            margin: 1%;
+        }
+
+        div {
+            margin: 1% 0;
+        }
+    </style>
+</html>
