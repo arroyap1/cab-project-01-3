@@ -51,6 +51,10 @@ https://scoutapm.com/blog/python-flask-tutorial-getting-started-with-flask
 https://www.geeksforgeeks.org/python-using-for-loop-in-flask/
 """
 
+"""
+Coded by Paula Arroyave
+"""
+
 import psycopg2
 from config import config
 from flask import Flask, render_template, request
