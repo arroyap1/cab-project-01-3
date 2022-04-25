@@ -1,0 +1,137 @@
+<!-- /templates/my-form.html-->
+<!-- coded by Paula Arroyave-->
+
+<html>
+    <head>
+        <title>Fleet Vehicle Database</title>
+    </head>
+    <body style="background-color:rgb(129, 202, 172);">
+
+	    <h2><center>Fleet Vehicle Database</center></h2>
+        <h4><center>Welcome! Come learn about TCNJ's Fleet Vehicles!</center></h4>
+
+        <h4>Department Vehicle Comparison</h4>
+
+        <form action="/dep-handler" method="POST">
+            <div>
+
+                View all vehicles in the <select name="dep"> 
+                    <option value= "Access Control" SELECTED>Access Control</option>
+                    <option value= "Admissions" SELECTED>Admissions</option>
+                    <option value= "Athletics" SELECTED>Athletics</option>
+                    <option value= "Biology" SELECTED>Biology</option>
+                    <option value= "Bldg. Services" SELECTED>Bldg. Services</option>
+                    <option value= "Bonner Center" SELECTED>Bonner Center</option>
+                    <option value= "Campus PD" SELECTED>Campus PD</option>
+                    <option value= "Carpenter" SELECTED>Carpenter</option>
+                    <option value= "Carpenter/Roof" SELECTED>Carpenter/Roof</option>
+                    <option value= "Carpenter Sup" SELECTED>Carpenter Sup</option>
+                    <option value= "Const. Shop" SELECTED>Const. Shop</option>
+                    <option value= "Electric Shop" SELECTED>Electric Shop</option>
+                    <option value= "Fleet Loaner" SELECTED>Fleet Loaner</option>
+                    <option value= "Grounds" SELECTED>Grounds</option>
+                    <option value= "Grounds, auto" SELECTED>Grounds, auto</option>
+                    <option value= "Grounds EXT" SELECTED>Grounds EXT</option>
+                    <option value= "Grounds Sup" SELECTED>Grounds Sup</option>
+                    <option value= "HVAC Shop" SELECTED>HVAC Shop</option>
+                    <option value= "HVAC Shop PH" SELECTED>HVAC Shop PH</option>
+                    <option value= "Information Tech." SELECTED>Information Tech.</option>
+                    <option value= "Mailing/Receiving" SELECTED>Mailing/Receiving</option>
+                    <option value= "Mason" SELECTED>Mason</option>
+                </select> 
+                department
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+        
+           
+
+        <h4>Vehicle Info Comparison</h4>
+        <form action="/info-handler" method="POST">
+            <div>
+
+                View <select name="vehicle category">
+                    <option value="Curr_Veh">Current</option>
+                    <option value="Prop_Veh">Proposed</option>
+                    <option value="Fut_Veh">Future</option>
+                    <option value="Veh_Info">All</option>
+                </select>
+
+                vehicles
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h4>Vehicle Type Comparison</h4>
+        <form action="/type-handler" method="POST">
+            <div>
+
+                View all current vehicles categorized as <select name="vehicle type">
+                    <option value="Curr_Van">Vans</option>
+                    <option value="Curr_Pickup">Pickups</option>
+                    <option value="Curr_Other">Others</option>
+                </select>
+
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h4>AEGHG Comparison</h4>
+        <form action="/aeghg-handler" method="POST">
+            <div>
+
+                View <select name="vehicle category">
+                    <option value="Curr_Emis">Current</option>
+                    <option value="Prop_Emis">Proposed</option>
+                    <option value="Fut_Emis">Future</option>
+                    <option value="Type_Emis">All</option>
+                </select>
+
+                vehicles with AEGHG 
+                <input type="radio" name="options"  value="<"><</input>
+                <input type="radio" name="options"  value=">">></input>
+                <input type="radio" name="options"  value="=">=</input>
+                <input type="radio" name="options"  value="<="><=</input>
+                <input type="radio" name="options"  value=">=">>=</input>
+
+                <input type="text" name="aeghg">
+            </div>
+                <input type="submit" value="Submit">
+        </form>
+
+        <h4>Total Cost Comparison</h4>
+        <form action="/cost-handler" method="POST">
+            <div>
+
+                View <select name="vehicle category">
+                    <option value="Curr_Cost">Current</option>
+                    <option value="Prop_Cost">Proposed</option>
+                    <option value="Fut_Cost">Future</option>
+                    <option value="Type_Cost">All</option>
+                </select>
+
+                vehicles' total cost 
+                <input type="radio" name="options"  value="<"><</input>
+                <input type="radio" name="options"  value=">">></input>
+                <input type="radio" name="options"  value="=">=</input>
+                <input type="radio" name="options"  value="<="><=</input>
+                <input type="radio" name="options"  value=">=">>=</input>
+
+                <input type="text" name="cost">
+            </div>
+                <input type="submit" value="Submit">
+        </form>
+
+    </body>
+
+    <!-- minimal styling -->
+    <style>
+        form {
+            margin: 1%;
+        }
+
+        div {
+            margin: 1% 0;
+        }
+    </style>
+</html>
