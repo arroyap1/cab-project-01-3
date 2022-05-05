@@ -42,7 +42,7 @@ vehicles need to be replaced, hopefully in accordance with FIFO.
     #log into you GitHub account
 
     cd doc/5a/
-    chmod 755 build_db.sh
+    chmod 755 build_db.sh #must change access rights
     ./build_db.sh
     cd ../5b/
 ### Usage
