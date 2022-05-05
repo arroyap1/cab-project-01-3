@@ -5,6 +5,7 @@ Group Members: Paula Arroyave, James Blair, Faiza Hoque, Drake Lam, Nicole Lenge
 3. [Objective](#usage)
 4. [Description of the Database](#usage)
 5. [Description of the need for module](#usage)
+6. [How To Install](#usage)
 <a name="desc"></a>
 ## 
 
@@ -27,5 +28,26 @@ The module is necessary in addressing the problem because it provides
 information about how fuel source, emissions, age, quantity, and operational costs
 influences our solution. By examining the variables and outputs, we will be able to properly determine which
 vehicles need to be replaced, hopefully in accordance with FIFO.
+
+## How To Install:
+### One time installation:
+    #install python pip and psycopg2 packages
+    sudo pacman -Syu
+    sudo pacman -S python-pip python-psycopg2
+
+    #install flask
+    pip install flask
+### Clone our GitHub
+    git clone https://github.com/TCNJ-degoodj/cab-project-01-3
+    #log into you GitHub account
+
+    cd doc/5a/
+    chmod 755 build_db.sh
+    ./build_db.sh
+    cd ../5b/
+### Usage
+    export FLASK_APP=app.py
+    flask run
+    #then browse to http://127.0.0.1:5000/
 
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6871314&assignment_repo_type=AssignmentRepo)
