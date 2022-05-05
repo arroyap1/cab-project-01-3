@@ -41,7 +41,7 @@ vehicles need to be replaced, hopefully in accordance with FIFO.
     git clone https://github.com/TCNJ-degoodj/cab-project-01-3
     #log into you GitHub account
 
-    cd doc/5a/
+    cd cab-project-01-3/doc/5a/
     chmod 755 build_db.sh #must change access rights
     ./build_db.sh
     cd ../5b/
